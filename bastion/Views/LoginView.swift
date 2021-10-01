@@ -1,52 +1,61 @@
 import SwiftUI
 
-let colorGradient = LinearGradient(gradient: Gradient(colors: [Color.blue, Color.green]), startPoint: .topLeading, endPoint: .bottomTrailing)
+let colorGradient = LinearGradient(gradient: Gradient(colors: [Color("LogoTopColor"), Color("LogoBottomColor")]), startPoint: .topLeading, endPoint: .bottomTrailing)
 
 struct LoginView: View {
-    let lightGrayColor = Color(red: 239, green: 243, blue: 244, opacity: 1)
     
-    @State var username: String = ""
-    @State var password: String = ""
+    @State var isLogged: Bool = false
     
     var body: some View {
-        ZStack {
-            Image("LoginBg")
-                .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
-            Image("LoginCard")
-                .resizable()
-                .scaledToFill()
-                .frame(width: 300, height: 360, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            VStack {
-                Image("Logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 70, height: 70, alignment: .top)
-                    .padding()
-                TextField("Username", text: $username)
-                    .padding()
-                    .foregroundColor(.black)
-                    .background(RoundedRectangle(cornerRadius:5).fill(lightGrayColor))
-                SecureField("Mot de passe", text: $password)
-                    .padding()
-                    .foregroundColor(.black)
-                    .background(RoundedRectangle(cornerRadius:5).fill(lightGrayColor))
-                Button( action: {
-                    
-                }) {
-                    LoginButtonContent()
-                }
-            }
-            .frame(width: 230, height: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+        if (isLogged) {
+            //home
+        } else {
+            LoginScreen()
         }
         
     }
 }
 
+struct LoginScreen: View {
+    @State var username: String = ""
+    @State var password: String = ""
+    @ObservedObject var usermanager = UserManager()
+    var body: some View {
+        ZStack {
+            LoginBackground()
+            LoginCard()
+            VStack {
+                Logo()
+                HStack {
+                    Image(systemName: "person")
+                        .foregroundColor(.gray)
+                    TextField("Username", text: $username)
+                        .foregroundColor(.black)
+                        .disableAutocorrection(true)
+                }
+                .padding()
+                HStack {
+                    Image(systemName: "lock")
+                        .foregroundColor(.gray)
+                    SecureField("Mot de passe", text: $password)
+                        .foregroundColor(.black)
+                        .disableAutocorrection(true)
+                }
+                .padding()
+                Button( action: {
+                    usermanager.verifyAll(username: username, password: password)
+                }) {
+                    LoginButtonContent()
+                }
+            }
+            .frame(width: 330, height: 500, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+        }
+    }
+}
+
 struct LoginButtonContent: View {
     var body: some View {
-        return Text("Se connecter")
+        Text("Se connecter")
             .font(.headline)
             .foregroundColor(.white)
             .frame(width: 175, height: 40)
@@ -61,6 +70,32 @@ struct WelcomeMsg: View {
             .font(.largeTitle)
             .fontWeight(.semibold)
             .padding(.bottom, 20)
+    }
+}
+
+struct LoginCard: View {
+    var body: some View {
+        Image("LoginCard")
+            .resizable()
+            .scaledToFill()
+            .frame(width: 390, height: 460, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+    }
+}
+
+struct LoginBackground: View {
+    var body: some View {
+        Image("LoginBg")
+            .resizable()
+            .scaledToFill()
+            .edgesIgnoringSafeArea(.all)
+    }
+}
+
+struct Logo: View {
+    var body: some View {
+        Image("Logo")
+            .resizable()
+            .frame(width: 120, height: 120, alignment: .top)
     }
 }
 

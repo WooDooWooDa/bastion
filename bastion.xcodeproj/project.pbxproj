@@ -13,6 +13,7 @@
 		C4466D1C26FB568500F51273 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4466D1B26FB568500F51273 /* Preview Assets.xcassets */; };
 		C4466D2726FB568500F51273 /* bastionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4466D2626FB568500F51273 /* bastionTests.swift */; };
 		C4466D3226FB568500F51273 /* bastionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4466D3126FB568500F51273 /* bastionUITests.swift */; };
+		C46250EF27078DFE00794769 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250EE27078DFE00794769 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		C4466D2D26FB568500F51273 /* bastionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bastionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4466D3126FB568500F51273 /* bastionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bastionUITests.swift; sourceTree = "<group>"; };
 		C4466D3326FB568500F51273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C46250EE27078DFE00794769 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				C4466D1426FB568400F51273 /* BastionApp.swift */,
-				C4466D4226FB724700F51273 /* Controllers */,
+				C4466D4226FB724700F51273 /* ViewModels */,
 				C4466D4126FB723800F51273 /* Views */,
 				C4466D1826FB568500F51273 /* Assets.xcassets */,
 				C4466D1D26FB568500F51273 /* Info.plist */,
@@ -139,11 +141,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C4466D4226FB724700F51273 /* Controllers */ = {
+		C4466D4226FB724700F51273 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C46250EE27078DFE00794769 /* UserManager.swift */,
 			);
-			path = Controllers;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46250EF27078DFE00794769 /* UserManager.swift in Sources */,
 				C4466D1726FB568400F51273 /* LoginView.swift in Sources */,
 				C4466D1526FB568400F51273 /* BastionApp.swift in Sources */,
 			);
