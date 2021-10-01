@@ -3,23 +3,9 @@ import SwiftUI
 let colorGradient = LinearGradient(gradient: Gradient(colors: [Color("LogoTopColor"), Color("LogoBottomColor")]), startPoint: .topLeading, endPoint: .bottomTrailing)
 
 struct LoginView: View {
+    @StateObject private var usermanager = UserManager()
+    @EnvironmentObject var authentication: Authentication
     
-    @State var isLogged: Bool = false
-    
-    var body: some View {
-        if (isLogged) {
-            //home
-        } else {
-            LoginScreen()
-        }
-        
-    }
-}
-
-struct LoginScreen: View {
-    @State var username: String = ""
-    @State var password: String = ""
-    @ObservedObject var usermanager = UserManager()
     var body: some View {
         ZStack {
             LoginBackground()
@@ -29,7 +15,7 @@ struct LoginScreen: View {
                 HStack {
                     Image(systemName: "person")
                         .foregroundColor(.gray)
-                    TextField("Username", text: $username)
+                    TextField("Username", text: $usermanager.credentials.username)
                         .foregroundColor(.black)
                         .disableAutocorrection(true)
                 }
@@ -37,16 +23,27 @@ struct LoginScreen: View {
                 HStack {
                     Image(systemName: "lock")
                         .foregroundColor(.gray)
-                    SecureField("Mot de passe", text: $password)
+                    SecureField("Mot de passe", text: $usermanager.credentials.password)
                         .foregroundColor(.black)
                         .disableAutocorrection(true)
                 }
                 .padding()
+                if (usermanager.showProgressView) {
+                    ProgressView()
+                }
                 Button( action: {
-                    usermanager.verifyAll(username: username, password: password)
+                    usermanager.login {
+                        success in authentication.updateValidation(success: success)
+                    }
                 }) {
                     LoginButtonContent()
                 }
+                .disabled(usermanager.loginDisabled)
+            }
+            .autocapitalization(.none)
+            .disabled(usermanager.showProgressView)
+            .alert(item: $usermanager.error) {
+                error in Alert(title: Text("Connexion Invalide"), message: Text(error.localizedDescription))
             }
             .frame(width: 330, height: 500, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
         }
@@ -99,10 +96,13 @@ struct Logo: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
-            .previewDevice(PreviewDevice(rawValue: "iphone 12"))
+            .previewDevice("iphone 12")
             .previewDisplayName("iphone 12")
+        LoginView()
+            .previewDevice("iphone X")
+            .previewDisplayName("iphone X")
     }
 }

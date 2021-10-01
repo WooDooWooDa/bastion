@@ -2,9 +2,16 @@ import SwiftUI
 
 @main
 struct BastionApp: App {
+    @StateObject var authentication = Authentication()
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            if (authentication.isValidated) {
+                TabNavigation()
+                    .environmentObject(authentication)
+            } else {
+                LoginView()
+                    .environmentObject(authentication)
+            }
         }
     }
 }

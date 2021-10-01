@@ -14,6 +14,10 @@
 		C4466D2726FB568500F51273 /* bastionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4466D2626FB568500F51273 /* bastionTests.swift */; };
 		C4466D3226FB568500F51273 /* bastionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4466D3126FB568500F51273 /* bastionUITests.swift */; };
 		C46250EF27078DFE00794769 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250EE27078DFE00794769 /* UserManager.swift */; };
+		C46250F2270794A200794769 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250F1270794A200794769 /* Credentials.swift */; };
+		C46250F52707951600794769 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250F42707951600794769 /* ApiService.swift */; };
+		C46250F727079A6300794769 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250F627079A6300794769 /* ContentView.swift */; };
+		C46250F927079A9F00794769 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250F827079A9F00794769 /* Authentication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		C4466D3126FB568500F51273 /* bastionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bastionUITests.swift; sourceTree = "<group>"; };
 		C4466D3326FB568500F51273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46250EE27078DFE00794769 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		C46250F1270794A200794769 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		C46250F42707951600794769 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		C46250F627079A6300794769 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C46250F827079A9F00794769 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,8 @@
 		C4466D1326FB568400F51273 /* bastion */ = {
 			isa = PBXGroup;
 			children = (
+				C46250F32707950A00794769 /* Services */,
+				C46250F02707949500794769 /* Models */,
 				C4466D1426FB568400F51273 /* BastionApp.swift */,
 				C4466D4226FB724700F51273 /* ViewModels */,
 				C4466D4126FB723800F51273 /* Views */,
@@ -137,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				C4466D1626FB568400F51273 /* LoginView.swift */,
+				C46250F627079A6300794769 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +158,23 @@
 				C46250EE27078DFE00794769 /* UserManager.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C46250F02707949500794769 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C46250F1270794A200794769 /* Credentials.swift */,
+				C46250F827079A9F00794769 /* Authentication.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C46250F32707950A00794769 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C46250F42707951600794769 /* ApiService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,8 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46250F927079A9F00794769 /* Authentication.swift in Sources */,
 				C46250EF27078DFE00794769 /* UserManager.swift in Sources */,
+				C46250F52707951600794769 /* ApiService.swift in Sources */,
+				C46250F727079A6300794769 /* ContentView.swift in Sources */,
 				C4466D1726FB568400F51273 /* LoginView.swift in Sources */,
+				C46250F2270794A200794769 /* Credentials.swift in Sources */,
 				C4466D1526FB568400F51273 /* BastionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
