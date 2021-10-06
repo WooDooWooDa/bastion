@@ -18,6 +18,8 @@
 		C46250F52707951600794769 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250F42707951600794769 /* ApiService.swift */; };
 		C46250F727079A6300794769 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250F627079A6300794769 /* ContentView.swift */; };
 		C46250F927079A9F00794769 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250F827079A9F00794769 /* Authentication.swift */; };
+		C46518B5270DD37000D3FFBA /* Balise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46518B4270DD37000D3FFBA /* Balise.swift */; };
+		C46518B7270DF70800D3FFBA /* BaliseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46518B6270DF70800D3FFBA /* BaliseDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		C46250F42707951600794769 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		C46250F627079A6300794769 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C46250F827079A9F00794769 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		C46518B4270DD37000D3FFBA /* Balise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balise.swift; sourceTree = "<group>"; };
+		C46518B6270DF70800D3FFBA /* BaliseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaliseDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 			children = (
 				C4466D1626FB568400F51273 /* LoginView.swift */,
 				C46250F627079A6300794769 /* ContentView.swift */,
+				C46518B6270DF70800D3FFBA /* BaliseDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			children = (
 				C46250F1270794A200794769 /* Credentials.swift */,
 				C46250F827079A9F00794769 /* Authentication.swift */,
+				C46518B4270DD37000D3FFBA /* Balise.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -311,8 +317,10 @@
 				C46250F52707951600794769 /* ApiService.swift in Sources */,
 				C46250F727079A6300794769 /* ContentView.swift in Sources */,
 				C4466D1726FB568400F51273 /* LoginView.swift in Sources */,
+				C46518B7270DF70800D3FFBA /* BaliseDetailView.swift in Sources */,
 				C46250F2270794A200794769 /* Credentials.swift in Sources */,
 				C4466D1526FB568400F51273 /* BastionApp.swift in Sources */,
+				C46518B5270DD37000D3FFBA /* Balise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +482,7 @@
 				DEVELOPMENT_TEAM = 2DJHGCMX5V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = bastion/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,7 +504,7 @@
 				DEVELOPMENT_TEAM = 2DJHGCMX5V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = bastion/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

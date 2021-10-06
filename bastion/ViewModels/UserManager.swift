@@ -15,7 +15,6 @@ class UserManager: ObservableObject {
         showProgressView = true
         ApiService.shared.login(credentials: credentials) { [unowned self](result:Result<Bool, Authentication.AuthenticationError>) in
             showProgressView = false
-            print(result)
             switch result {
                 case .success:
                     completion(true)

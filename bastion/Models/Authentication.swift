@@ -24,9 +24,7 @@ class Authentication: ObservableObject {
     }
     
     func updateValidation(success: Bool) {
-        print(success)
         if (success) {
-            print("here")
             isValidated = true
         }
     }

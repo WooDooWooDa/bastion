@@ -30,15 +30,17 @@ struct LoginView: View {
                 .padding()
                 if (usermanager.showProgressView) {
                     ProgressView()
-                }
-                Button( action: {
-                    usermanager.login {
-                        success in authentication.updateValidation(success: success)
+                        .padding(.vertical, 10)
+                } else {
+                    Button( action: {
+                        usermanager.login {
+                            success in authentication.updateValidation(success: success)
+                        }
+                    }) {
+                        LoginButtonContent()
                     }
-                }) {
-                    LoginButtonContent()
+                    .disabled(usermanager.loginDisabled)
                 }
-                .disabled(usermanager.loginDisabled)
             }
             .autocapitalization(.none)
             .disabled(usermanager.showProgressView)
@@ -98,9 +100,6 @@ struct Logo: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
-            .previewDevice("iphone 12")
-            .previewDisplayName("iphone 12")
         LoginView()
             .previewDevice("iphone X")
             .previewDisplayName("iphone X")
