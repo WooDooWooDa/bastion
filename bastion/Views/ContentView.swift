@@ -1,24 +1,40 @@
 import SwiftUI
 
 struct BaliseView: View {
-    var balises: [Balise] = Baliselist.testList
+    //var balises: [Balise] = Baliselist.testList
+    @State var openSheet = false
+    @StateObject private var baliseManager = BaliseManager()
     
     var body: some View {
         ZStack(alignment: .top) {
             VStack(spacing: 20) {
                 Text("mes balises")
-                    .foregroundColor(.black).bold()
+                    .bold()
                     .font(Font.system(size: 45).smallCaps())
                 NavigationView {
                     List {
-                        ForEach(balises, id: \.id) { balise in
+                        ForEach(baliseManager.getBalises(), id: \.id) { balise in
                             NavigationLink(destination: BaliseDetailView(balise: balise), label: { ItemRow(balise: balise) }
                             )
                         }
                         .padding(.vertical, 3)
                         .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden)
+                        HStack {
+                            Button(action: {
+                                openSheet.toggle()
+                            }) {
+                                Text("Connecter une balise ...")
+                            }.sheet(isPresented: $openSheet) {
+                                AddBaliseView()  
+                                    .environmentObject(baliseManager)
+                            }
+                        }
+                        .listRowInsets(EdgeInsets())
+                        .frame(maxWidth: .infinity, minHeight: 50)
+                        .background(Color(UIColor.systemGroupedBackground))
                     }
+                    .listStyle(GroupedListStyle())
                     .navigationBarTitle("Retour à mes balises")
                     .navigationBarHidden(true)
                 }
@@ -47,7 +63,6 @@ struct ItemRow: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
-                .fill(.white)
                 .shadow(color: Color.black, radius: 3, x: 4, y: 2)
             HStack {
                 VStack {
@@ -58,6 +73,7 @@ struct ItemRow: View {
                         .font(Font.system(.title3).smallCaps())
                         .padding(.horizontal, 15)
                 }
+                .foregroundColor(Color.init("TextColor"))
                 .frame(width: 140)
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Possedé par : " + balise.currentTeam)
@@ -65,13 +81,13 @@ struct ItemRow: View {
                     Text("Batterie : " + String(balise.batteryLevel) + "%")
                         .font(.caption)
                 }
+                .foregroundColor(Color.init("TextColor"))
                 .frame(width: 180, height: 85)
             }
             .padding(.vertical, 10)
         }
     }
 }
-
 
 struct BaliseView_Preview: PreviewProvider {
     static var previews: some View {

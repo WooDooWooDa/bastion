@@ -1,8 +1,9 @@
 import SwiftUI
 
-let colorGradient = LinearGradient(gradient: Gradient(colors: [Color("LogoTopColor"), Color("LogoBottomColor")]), startPoint: .topLeading, endPoint: .bottomTrailing)
+
 
 struct LoginView: View {
+    
     @StateObject private var usermanager = UserManager()
     @EnvironmentObject var authentication: Authentication
     
@@ -14,18 +15,24 @@ struct LoginView: View {
                 Logo()
                 HStack {
                     Image(systemName: "person")
-                        .foregroundColor(.gray)
-                    TextField("Username", text: $usermanager.credentials.username)
                         .foregroundColor(.black)
+                    TextField("", text: $usermanager.credentials.username)
                         .disableAutocorrection(true)
+                        .foregroundColor(.black)
+                        .placeholder(when: usermanager.credentials.username.isEmpty) {
+                            Text("Nom d'utilisateur").foregroundColor(.black).opacity(0.7)
+                        }
                 }
                 .padding()
                 HStack {
                     Image(systemName: "lock")
-                        .foregroundColor(.gray)
-                    SecureField("Mot de passe", text: $usermanager.credentials.password)
+                        .foregroundColor(.black)
+                    SecureField("", text: $usermanager.credentials.password)
                         .foregroundColor(.black)
                         .disableAutocorrection(true)
+                        .placeholder(when: usermanager.credentials.password.isEmpty) {
+                            Text("Mot de passe").foregroundColor(.black).opacity(0.7)
+                        }
                 }
                 .padding()
                 if (usermanager.showProgressView) {
@@ -39,6 +46,8 @@ struct LoginView: View {
                     }) {
                         LoginButtonContent()
                     }
+                    .padding()
+                    .opacity(usermanager.loginDisabled ? 0.5 : 1)
                     .disabled(usermanager.loginDisabled)
                 }
             }
@@ -58,7 +67,7 @@ struct LoginButtonContent: View {
             .font(.headline)
             .foregroundColor(.white)
             .frame(width: 175, height: 40)
-            .background(colorGradient)
+            .background(LinearGradient(gradient: Gradient(colors: [Color("LogoTopColor"), Color("LogoBottomColor")]), startPoint: .topLeading, endPoint: .bottomTrailing))
             .cornerRadius(15)
     }
 }
@@ -94,7 +103,20 @@ struct Logo: View {
     var body: some View {
         Image("Logo")
             .resizable()
-            .frame(width: 120, height: 120, alignment: .top)
+            .frame(width: 125, height: 125, alignment: .top)
+    }
+}
+
+extension View {
+    func placeholder<Content: View>(
+        when shouldShow: Bool,
+        alignment: Alignment = .leading,
+        @ViewBuilder placeholder: () -> Content) -> some View {
+
+        ZStack(alignment: alignment) {
+            placeholder().opacity(shouldShow ? 1 : 0)
+            self
+        }
     }
 }
 

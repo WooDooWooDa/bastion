@@ -11,7 +11,6 @@
 		C4466D1726FB568400F51273 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4466D1626FB568400F51273 /* LoginView.swift */; };
 		C4466D1926FB568500F51273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4466D1826FB568500F51273 /* Assets.xcassets */; };
 		C4466D1C26FB568500F51273 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4466D1B26FB568500F51273 /* Preview Assets.xcassets */; };
-		C4466D2726FB568500F51273 /* bastionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4466D2626FB568500F51273 /* bastionTests.swift */; };
 		C4466D3226FB568500F51273 /* bastionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4466D3126FB568500F51273 /* bastionUITests.swift */; };
 		C46250EF27078DFE00794769 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250EE27078DFE00794769 /* UserManager.swift */; };
 		C46250F2270794A200794769 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250F1270794A200794769 /* Credentials.swift */; };
@@ -20,16 +19,13 @@
 		C46250F927079A9F00794769 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250F827079A9F00794769 /* Authentication.swift */; };
 		C46518B5270DD37000D3FFBA /* Balise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46518B4270DD37000D3FFBA /* Balise.swift */; };
 		C46518B7270DF70800D3FFBA /* BaliseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46518B6270DF70800D3FFBA /* BaliseDetailView.swift */; };
+		C4B6D6EE2710C67B00794A9E /* AddBaliseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B6D6ED2710C67B00794A9E /* AddBaliseView.swift */; };
+		C4B6D6F02710C7EA00794A9E /* BaliseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B6D6EF2710C7EA00794A9E /* BaliseManager.swift */; };
+		C4B6D6F22710CE8200794A9E /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B6D6F12710CE8200794A9E /* BLEManager.swift */; };
+		C4B6D6F42710DD2300794A9E /* BLEPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B6D6F32710DD2300794A9E /* BLEPeripheral.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C4466D2326FB568500F51273 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C4466D0926FB568400F51273 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C4466D1026FB568400F51273;
-			remoteInfo = bastion;
-		};
 		C4466D2E26FB568500F51273 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C4466D0926FB568400F51273 /* Project object */;
@@ -46,9 +42,6 @@
 		C4466D1826FB568500F51273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4466D1B26FB568500F51273 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C4466D1D26FB568500F51273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4466D2226FB568500F51273 /* bastionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bastionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4466D2626FB568500F51273 /* bastionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bastionTests.swift; sourceTree = "<group>"; };
-		C4466D2826FB568500F51273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4466D2D26FB568500F51273 /* bastionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bastionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4466D3126FB568500F51273 /* bastionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bastionUITests.swift; sourceTree = "<group>"; };
 		C4466D3326FB568500F51273 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,17 +52,14 @@
 		C46250F827079A9F00794769 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		C46518B4270DD37000D3FFBA /* Balise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balise.swift; sourceTree = "<group>"; };
 		C46518B6270DF70800D3FFBA /* BaliseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaliseDetailView.swift; sourceTree = "<group>"; };
+		C4B6D6ED2710C67B00794A9E /* AddBaliseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBaliseView.swift; sourceTree = "<group>"; };
+		C4B6D6EF2710C7EA00794A9E /* BaliseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaliseManager.swift; sourceTree = "<group>"; };
+		C4B6D6F12710CE8200794A9E /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
+		C4B6D6F32710DD2300794A9E /* BLEPeripheral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEPeripheral.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C4466D0E26FB568400F51273 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C4466D1F26FB568500F51273 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -90,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				C4466D1326FB568400F51273 /* bastion */,
-				C4466D2526FB568500F51273 /* bastionTests */,
 				C4466D3026FB568500F51273 /* bastionUITests */,
 				C4466D1226FB568400F51273 /* Products */,
 			);
@@ -100,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				C4466D1126FB568400F51273 /* bastion.app */,
-				C4466D2226FB568500F51273 /* bastionTests.xctest */,
 				C4466D2D26FB568500F51273 /* bastionUITests.xctest */,
 			);
 			name = Products;
@@ -109,9 +97,9 @@
 		C4466D1326FB568400F51273 /* bastion */ = {
 			isa = PBXGroup;
 			children = (
+				C4466D1426FB568400F51273 /* BastionApp.swift */,
 				C46250F32707950A00794769 /* Services */,
 				C46250F02707949500794769 /* Models */,
-				C4466D1426FB568400F51273 /* BastionApp.swift */,
 				C4466D4226FB724700F51273 /* ViewModels */,
 				C4466D4126FB723800F51273 /* Views */,
 				C4466D1826FB568500F51273 /* Assets.xcassets */,
@@ -129,15 +117,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		C4466D2526FB568500F51273 /* bastionTests */ = {
-			isa = PBXGroup;
-			children = (
-				C4466D2626FB568500F51273 /* bastionTests.swift */,
-				C4466D2826FB568500F51273 /* Info.plist */,
-			);
-			path = bastionTests;
-			sourceTree = "<group>";
-		};
 		C4466D3026FB568500F51273 /* bastionUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +132,7 @@
 				C4466D1626FB568400F51273 /* LoginView.swift */,
 				C46250F627079A6300794769 /* ContentView.swift */,
 				C46518B6270DF70800D3FFBA /* BaliseDetailView.swift */,
+				C4B6D6ED2710C67B00794A9E /* AddBaliseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,7 +140,9 @@
 		C4466D4226FB724700F51273 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C4B6D6EF2710C7EA00794A9E /* BaliseManager.swift */,
 				C46250EE27078DFE00794769 /* UserManager.swift */,
+				C4B6D6F12710CE8200794A9E /* BLEManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -171,6 +153,7 @@
 				C46250F1270794A200794769 /* Credentials.swift */,
 				C46250F827079A9F00794769 /* Authentication.swift */,
 				C46518B4270DD37000D3FFBA /* Balise.swift */,
+				C4B6D6F32710DD2300794A9E /* BLEPeripheral.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,24 +186,6 @@
 			productReference = C4466D1126FB568400F51273 /* bastion.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C4466D2126FB568500F51273 /* bastionTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C4466D3926FB568500F51273 /* Build configuration list for PBXNativeTarget "bastionTests" */;
-			buildPhases = (
-				C4466D1E26FB568500F51273 /* Sources */,
-				C4466D1F26FB568500F51273 /* Frameworks */,
-				C4466D2026FB568500F51273 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C4466D2426FB568500F51273 /* PBXTargetDependency */,
-			);
-			name = bastionTests;
-			productName = bastionTests;
-			productReference = C4466D2226FB568500F51273 /* bastionTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		C4466D2C26FB568500F51273 /* bastionUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4466D3C26FB568500F51273 /* Build configuration list for PBXNativeTarget "bastionUITests" */;
@@ -251,10 +216,6 @@
 					C4466D1026FB568400F51273 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
-					C4466D2126FB568500F51273 = {
-						CreatedOnToolsVersion = 12.5.1;
-						TestTargetID = C4466D1026FB568400F51273;
-					};
 					C4466D2C26FB568500F51273 = {
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = C4466D1026FB568400F51273;
@@ -275,7 +236,6 @@
 			projectRoot = "";
 			targets = (
 				C4466D1026FB568400F51273 /* bastion */,
-				C4466D2126FB568500F51273 /* bastionTests */,
 				C4466D2C26FB568500F51273 /* bastionUITests */,
 			);
 		};
@@ -288,13 +248,6 @@
 			files = (
 				C4466D1C26FB568500F51273 /* Preview Assets.xcassets in Resources */,
 				C4466D1926FB568500F51273 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C4466D2026FB568500F51273 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,22 +266,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C46250F927079A9F00794769 /* Authentication.swift in Sources */,
+				C4B6D6F22710CE8200794A9E /* BLEManager.swift in Sources */,
 				C46250EF27078DFE00794769 /* UserManager.swift in Sources */,
 				C46250F52707951600794769 /* ApiService.swift in Sources */,
 				C46250F727079A6300794769 /* ContentView.swift in Sources */,
 				C4466D1726FB568400F51273 /* LoginView.swift in Sources */,
+				C4B6D6F42710DD2300794A9E /* BLEPeripheral.swift in Sources */,
 				C46518B7270DF70800D3FFBA /* BaliseDetailView.swift in Sources */,
+				C4B6D6EE2710C67B00794A9E /* AddBaliseView.swift in Sources */,
 				C46250F2270794A200794769 /* Credentials.swift in Sources */,
+				C4B6D6F02710C7EA00794A9E /* BaliseManager.swift in Sources */,
 				C4466D1526FB568400F51273 /* BastionApp.swift in Sources */,
 				C46518B5270DD37000D3FFBA /* Balise.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C4466D1E26FB568500F51273 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C4466D2726FB568500F51273 /* bastionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,11 +292,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C4466D2426FB568500F51273 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C4466D1026FB568400F51273 /* bastion */;
-			targetProxy = C4466D2326FB568500F51273 /* PBXContainerItemProxy */;
-		};
 		C4466D2F26FB568500F51273 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C4466D1026FB568400F51273 /* bastion */;
@@ -516,50 +460,6 @@
 			};
 			name = Release;
 		};
-		C4466D3A26FB568500F51273 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2DJHGCMX5V;
-				INFOPLIST_FILE = bastionTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = iot.bastionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bastion.app/bastion";
-			};
-			name = Debug;
-		};
-		C4466D3B26FB568500F51273 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2DJHGCMX5V;
-				INFOPLIST_FILE = bastionTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = iot.bastionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bastion.app/bastion";
-			};
-			name = Release;
-		};
 		C4466D3D26FB568500F51273 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -617,15 +517,6 @@
 			buildConfigurations = (
 				C4466D3726FB568500F51273 /* Debug */,
 				C4466D3826FB568500F51273 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C4466D3926FB568500F51273 /* Build configuration list for PBXNativeTarget "bastionTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C4466D3A26FB568500F51273 /* Debug */,
-				C4466D3B26FB568500F51273 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
