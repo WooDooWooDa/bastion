@@ -9,7 +9,7 @@ struct AddBaliseView: View {
     
     var body: some View {
         VStack {
-            Text("connections au balises")
+            Text("connections aux balises")
                 .bold()
                 .font(Font.system(size: 30).smallCaps())
             List {
@@ -19,7 +19,7 @@ struct AddBaliseView: View {
                         Spacer()
                         Text(String(peripheral.rssi))
                         Button(action: {
-                            bleManager.connect(peripheral: peripheral, baliseManager: baliseManager)
+                            bleManager.connect(peripheral: peripheral, baliseManager: baliseManager, presentationMode: presentationMode)
                         }) {
                             Text("Connecter")
                         }
@@ -42,13 +42,7 @@ struct AddBaliseView: View {
                     Button(action: {
                         bleManager.startScanning()
                     }) {
-                        Text("Start scanning...")
-                    }
-                    .padding()
-                    Button(action: {
-                        bleManager.stopScanning()
-                    }) {
-                        Text("stop scanning...")
+                        Text("Commencer le scan de balise...")
                     }
                     .padding()
                 }
