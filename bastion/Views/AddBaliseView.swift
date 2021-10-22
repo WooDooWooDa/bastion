@@ -17,7 +17,6 @@ struct AddBaliseView: View {
                     HStack {
                         Text(peripheral.name)
                         Spacer()
-                        Text(String(peripheral.rssi))
                         Button(action: {
                             bleManager.connect(peripheral: peripheral, baliseManager: baliseManager, presentationMode: presentationMode)
                         }) {
@@ -36,13 +35,13 @@ struct AddBaliseView: View {
                 .listRowInsets(EdgeInsets())
                 .frame(maxWidth: .infinity, minHeight: 50)
                 .background(Color(UIColor.systemGroupedBackground))
-            }.frame(height: 500)
+            }.frame(height: 600)
             HStack {
                 VStack {
                     Button(action: {
                         bleManager.startScanning()
                     }) {
-                        Text("Commencer le scan de balise...")
+                        Text("Trouver des balises...")
                     }
                     .padding()
                 }

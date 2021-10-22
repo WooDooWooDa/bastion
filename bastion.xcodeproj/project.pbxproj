@@ -19,6 +19,8 @@
 		C46250F927079A9F00794769 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250F827079A9F00794769 /* Authentication.swift */; };
 		C46518B5270DD37000D3FFBA /* Balise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46518B4270DD37000D3FFBA /* Balise.swift */; };
 		C46518B7270DF70800D3FFBA /* BaliseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46518B6270DF70800D3FFBA /* BaliseDetailView.swift */; };
+		C47FA6C2272350A5006148CF /* BaliseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47FA6C1272350A5006148CF /* BaliseView.swift */; };
+		C47FA6C4272350D6006148CF /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47FA6C3272350D6006148CF /* GameView.swift */; };
 		C4B6D6EE2710C67B00794A9E /* AddBaliseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B6D6ED2710C67B00794A9E /* AddBaliseView.swift */; };
 		C4B6D6F02710C7EA00794A9E /* BaliseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B6D6EF2710C7EA00794A9E /* BaliseManager.swift */; };
 		C4B6D6F22710CE8200794A9E /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B6D6F12710CE8200794A9E /* BLEManager.swift */; };
@@ -52,6 +54,8 @@
 		C46250F827079A9F00794769 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		C46518B4270DD37000D3FFBA /* Balise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balise.swift; sourceTree = "<group>"; };
 		C46518B6270DF70800D3FFBA /* BaliseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaliseDetailView.swift; sourceTree = "<group>"; };
+		C47FA6C1272350A5006148CF /* BaliseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaliseView.swift; sourceTree = "<group>"; };
+		C47FA6C3272350D6006148CF /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		C4B6D6ED2710C67B00794A9E /* AddBaliseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBaliseView.swift; sourceTree = "<group>"; };
 		C4B6D6EF2710C7EA00794A9E /* BaliseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaliseManager.swift; sourceTree = "<group>"; };
 		C4B6D6F12710CE8200794A9E /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
@@ -133,6 +137,8 @@
 				C46250F627079A6300794769 /* ContentView.swift */,
 				C46518B6270DF70800D3FFBA /* BaliseDetailView.swift */,
 				C4B6D6ED2710C67B00794A9E /* AddBaliseView.swift */,
+				C47FA6C1272350A5006148CF /* BaliseView.swift */,
+				C47FA6C3272350D6006148CF /* GameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -265,9 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C47FA6C2272350A5006148CF /* BaliseView.swift in Sources */,
 				C46250F927079A9F00794769 /* Authentication.swift in Sources */,
 				C4B6D6F22710CE8200794A9E /* BLEManager.swift in Sources */,
 				C46250EF27078DFE00794769 /* UserManager.swift in Sources */,
+				C47FA6C4272350D6006148CF /* GameView.swift in Sources */,
 				C46250F52707951600794769 /* ApiService.swift in Sources */,
 				C46250F727079A6300794769 /* ContentView.swift in Sources */,
 				C4466D1726FB568400F51273 /* LoginView.swift in Sources */,

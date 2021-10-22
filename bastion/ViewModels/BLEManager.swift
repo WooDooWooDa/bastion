@@ -23,11 +23,12 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     }
     
     func connect(peripheral: BLEPeripheral, baliseManager: BaliseManager, presentationMode: Binding<PresentationMode>) {
+        print("Connecting...")
         isScanning = false
         self.presentationMode = presentationMode
         self.baliseManager = baliseManager
         allCBPeripherals.forEach { p in
-            if (p.name == peripheral.name) {
+            if (p.identifier == peripheral.identifier) {
                 myCentral.connect(p, options: nil)
                 p.delegate = self
                 connected = p
@@ -53,7 +54,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
         
         if let name = advertisementData[CBAdvertisementDataLocalNameKey] as? String {
             peripheralName = name
-            let newPeripheral = BLEPeripheral(id: peripherals.count, name: peripheralName, rssi: RSSI.intValue)
+            let newPeripheral = BLEPeripheral(id: peripherals.count, identifier: peripheral.identifier, name: peripheralName,  rssi: RSSI.intValue)
             peripherals.append(newPeripheral)
             allCBPeripherals.append(peripheral)
         }
@@ -62,7 +63,7 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         print("Connected!")
         connected.discoverServices([baliseService])
-      }
+    }
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if central.state == .poweredOn {
@@ -71,7 +72,6 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
             isSwitchedOn = false
         }
     }
-    
 }
 
 extension BLEManager: CBPeripheralDelegate {
@@ -94,7 +94,7 @@ extension BLEManager: CBPeripheralDelegate {
         let caracteristic = characteristics.first {
             $0.uuid == baliseIDCaracteristic
         }!
-        //peripheral.setNotifyValue(true, for: caracteristic)       Activer le notify value, va caller la funtion en dessous chaque fosi que notify
+        //peripheral.setNotifyValue(true, for: caracteristic)       Activer le notify value, va caller la funtion en dessous chaque fois que notify
         peripheral.readValue(for: caracteristic)
     }
     
@@ -111,5 +111,4 @@ extension BLEManager: CBPeripheralDelegate {
             presentationMode.wrappedValue.dismiss()
         }
     }
-    
 }
