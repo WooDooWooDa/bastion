@@ -3,6 +3,7 @@ import Foundation
 import SwiftUI
 
 class Authentication: ObservableObject {
+    @Published var enterprise: Enterprise!
     @Published var isValidated = false
     
     enum AuthenticationError: Error, LocalizedError, Identifiable {
@@ -21,6 +22,10 @@ class Authentication: ObservableObject {
                 return ""
             }
         }
+    }
+    
+    func setEnterprise(newEnterprise: Enterprise) {
+        enterprise = newEnterprise
     }
     
     func updateValidation(success: Bool) {

@@ -41,11 +41,19 @@ class BLEManager: NSObject, ObservableObject, CBCentralManagerDelegate {
         isScanning = true
         print("Starting Scanning")
         myCentral.scanForPeripherals(withServices: [baliseService], options: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            self.stopScanning()
+        }
     }
     
     func stopScanning() {
         isScanning = false
         print("Stoping Scanning")
+        if (peripherals.isEmpty) {
+            print("Pas de balise trouvé")
+        } else {
+            print("time out")
+        }
         myCentral.stopScan()
     }
     

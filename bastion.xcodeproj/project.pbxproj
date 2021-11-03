@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C428F3E52729936100F83737 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428F3E42729936100F83737 /* ApiResponse.swift */; };
+		C428F3E92732BB7000F83737 /* EnterpriseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428F3E82732BB7000F83737 /* EnterpriseView.swift */; };
+		C428F3ED2732E14A00F83737 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C428F3EC2732E14A00F83737 /* logo.png */; };
+		C428F3EF2732E23800F83737 /* Enterprise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428F3EE2732E23800F83737 /* Enterprise.swift */; };
 		C4466D1526FB568400F51273 /* BastionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4466D1426FB568400F51273 /* BastionApp.swift */; };
 		C4466D1726FB568400F51273 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4466D1626FB568400F51273 /* LoginView.swift */; };
 		C4466D1926FB568500F51273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4466D1826FB568500F51273 /* Assets.xcassets */; };
@@ -15,7 +19,7 @@
 		C46250EF27078DFE00794769 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250EE27078DFE00794769 /* UserManager.swift */; };
 		C46250F2270794A200794769 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250F1270794A200794769 /* Credentials.swift */; };
 		C46250F52707951600794769 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250F42707951600794769 /* ApiService.swift */; };
-		C46250F727079A6300794769 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250F627079A6300794769 /* ContentView.swift */; };
+		C46250F727079A6300794769 /* TabNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250F627079A6300794769 /* TabNavigation.swift */; };
 		C46250F927079A9F00794769 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46250F827079A9F00794769 /* Authentication.swift */; };
 		C46518B5270DD37000D3FFBA /* Balise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46518B4270DD37000D3FFBA /* Balise.swift */; };
 		C46518B7270DF70800D3FFBA /* BaliseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46518B6270DF70800D3FFBA /* BaliseDetailView.swift */; };
@@ -38,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C428F3E42729936100F83737 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		C428F3E82732BB7000F83737 /* EnterpriseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseView.swift; sourceTree = "<group>"; };
+		C428F3EC2732E14A00F83737 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Assets.xcassets/Logo.imageset/logo.png; sourceTree = "<group>"; };
+		C428F3EE2732E23800F83737 /* Enterprise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enterprise.swift; sourceTree = "<group>"; };
 		C4466D1126FB568400F51273 /* bastion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bastion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4466D1426FB568400F51273 /* BastionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BastionApp.swift; sourceTree = "<group>"; };
 		C4466D1626FB568400F51273 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -50,7 +58,7 @@
 		C46250EE27078DFE00794769 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		C46250F1270794A200794769 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		C46250F42707951600794769 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		C46250F627079A6300794769 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C46250F627079A6300794769 /* TabNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigation.swift; sourceTree = "<group>"; };
 		C46250F827079A9F00794769 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		C46518B4270DD37000D3FFBA /* Balise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balise.swift; sourceTree = "<group>"; };
 		C46518B6270DF70800D3FFBA /* BaliseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaliseDetailView.swift; sourceTree = "<group>"; };
@@ -101,6 +109,7 @@
 		C4466D1326FB568400F51273 /* bastion */ = {
 			isa = PBXGroup;
 			children = (
+				C428F3EC2732E14A00F83737 /* logo.png */,
 				C4466D1426FB568400F51273 /* BastionApp.swift */,
 				C46250F32707950A00794769 /* Services */,
 				C46250F02707949500794769 /* Models */,
@@ -134,11 +143,12 @@
 			isa = PBXGroup;
 			children = (
 				C4466D1626FB568400F51273 /* LoginView.swift */,
-				C46250F627079A6300794769 /* ContentView.swift */,
+				C46250F627079A6300794769 /* TabNavigation.swift */,
 				C46518B6270DF70800D3FFBA /* BaliseDetailView.swift */,
 				C4B6D6ED2710C67B00794A9E /* AddBaliseView.swift */,
 				C47FA6C1272350A5006148CF /* BaliseView.swift */,
 				C47FA6C3272350D6006148CF /* GameView.swift */,
+				C428F3E82732BB7000F83737 /* EnterpriseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +170,7 @@
 				C46250F827079A9F00794769 /* Authentication.swift */,
 				C46518B4270DD37000D3FFBA /* Balise.swift */,
 				C4B6D6F32710DD2300794A9E /* BLEPeripheral.swift */,
+				C428F3EE2732E23800F83737 /* Enterprise.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				C46250F42707951600794769 /* ApiService.swift */,
+				C428F3E42729936100F83737 /* ApiResponse.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -252,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C428F3ED2732E14A00F83737 /* logo.png in Resources */,
 				C4466D1C26FB568500F51273 /* Preview Assets.xcassets in Resources */,
 				C4466D1926FB568500F51273 /* Assets.xcassets in Resources */,
 			);
@@ -272,12 +285,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C47FA6C2272350A5006148CF /* BaliseView.swift in Sources */,
+				C428F3E92732BB7000F83737 /* EnterpriseView.swift in Sources */,
 				C46250F927079A9F00794769 /* Authentication.swift in Sources */,
 				C4B6D6F22710CE8200794A9E /* BLEManager.swift in Sources */,
+				C428F3EF2732E23800F83737 /* Enterprise.swift in Sources */,
 				C46250EF27078DFE00794769 /* UserManager.swift in Sources */,
 				C47FA6C4272350D6006148CF /* GameView.swift in Sources */,
+				C428F3E52729936100F83737 /* ApiResponse.swift in Sources */,
 				C46250F52707951600794769 /* ApiService.swift in Sources */,
-				C46250F727079A6300794769 /* ContentView.swift in Sources */,
+				C46250F727079A6300794769 /* TabNavigation.swift in Sources */,
 				C4466D1726FB568400F51273 /* LoginView.swift in Sources */,
 				C4B6D6F42710DD2300794A9E /* BLEPeripheral.swift in Sources */,
 				C46518B7270DF70800D3FFBA /* BaliseDetailView.swift in Sources */,
