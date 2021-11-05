@@ -19,7 +19,8 @@ class BaliseManager: ObservableObject {
             print("error")
             return
         }
-        self.balises.append(Balise(id: id))
+        let balise = ApiService.shared.getBalise(enterpriseId: 1, baliseId: id)
+        self.balises.append(balise)
     }
     
     func getBalises() -> [Balise] {

@@ -38,7 +38,7 @@ struct LoginView: View {
                         .padding(.vertical, 10)
                 } else {
                     Button( action: {
-                        usermanager.login {
+                        usermanager.login(authentication: authentication) {
                             success in authentication.updateValidation(success: success)
                         }
                     }) {
