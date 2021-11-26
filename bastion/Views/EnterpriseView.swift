@@ -3,7 +3,6 @@ import SwiftUI
 struct EnterpriseView: View {
     @EnvironmentObject var authentication: Authentication
     @State var enterprise: Enterprise = Enterprise(name: "loading...")
-    @State var employee: Employee = Employee(id: 0)
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -17,16 +16,16 @@ struct EnterpriseView: View {
                             Image(systemName: "house.circle.fill")
                                 .font(.system(size: 100.0))
                                 .padding(.vertical, 10)
-                            Text(enterprise.name)
+                            Text(authentication.account.name)
                                 .fontWeight(.bold)
                                 .font(Font.system(.title).smallCaps())
-                            Text(enterprise.address)
+                            Text(authentication.account.address)
                                 .padding(.top, 1)
                             Spacer()
                             Text("Employé connecté")
                                 .bold()
                                 .font(Font.system(size: 35).smallCaps())
-                            Text(employee.firstname + " " + employee.lastname)
+                            Text(authentication.account.firstname + " " + authentication.account.lastname)
                                 .padding(.top, 1)
                             Spacer()
                         }.padding()
@@ -37,10 +36,7 @@ struct EnterpriseView: View {
     }
     
     private func setEnterprise() {
-        let tempEnterprise = ApiService.shared.getEnterprise(employeeId: authentication.employee.id)
-        enterprise = tempEnterprise
-        employee = authentication.employee
-        print(enterprise)
+        
     }
 }
 

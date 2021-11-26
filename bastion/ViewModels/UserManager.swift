@@ -13,10 +13,6 @@ class UserManager: ObservableObject {
     
     func login(authentication: Authentication, completion: @escaping (Bool) -> Void) {
         showProgressView = true
-        //set employee in the api login fct
-        authentication.employee = Employee(id: 1, username: "bob", password: "password", enterpriseId: 1, firstname: "firstname", lastname: "lastname")
-        return completion(true)
-        
         ApiService.shared.login(authentication: authentication, credentials: credentials) { [unowned self](result:Result<Bool, Authentication.AuthenticationError>) in
             showProgressView = false
             switch result {

@@ -3,7 +3,7 @@ import Foundation
 import SwiftUI
 
 class Authentication: ObservableObject {
-    @Published var employee: Employee!
+    @Published var account: Account!
     @Published var isValidated = false
     
     enum AuthenticationError: Error, LocalizedError, Identifiable {

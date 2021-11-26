@@ -7,6 +7,7 @@ struct TabNavigation: View {
         TabView {
             BaliseView()
                 .tabItem { Label("Balises", systemImage: "antenna.radiowaves.left.and.right") }
+                .environmentObject(authentication)
             GameView()
                 .tabItem{ Label("Partie", systemImage: "gamecontroller") }
             EnterpriseView()

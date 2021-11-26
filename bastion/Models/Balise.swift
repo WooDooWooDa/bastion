@@ -2,13 +2,19 @@
 import Foundation
 import UIKit
 
-struct Balise: Identifiable {
-    let id: String
-    let name: String = randomName()
-    let batteryLevel: Float = 0
-    let points: Int = 0
-    let currentTeam: String = ""
-    let location: String = randomLocation()
+struct Balise: Codable {
+    let balise_id: Int
+    let balise_name: String
+    let description: String
+    let battery_level: String
+    let points_green: Int
+    let points_tan: Int
+    let current_team: String
+}
+
+struct BaliseDataCreate: Codable {
+    var id: String
+    var field_id: String
 }
 
 func randomName() -> String {
