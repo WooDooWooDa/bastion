@@ -2,6 +2,16 @@
 import Foundation
 import UIKit
 
+class baliseObservable: ObservableObject {
+    var balise_id: Int = 0
+    var balise_name: String = ""
+    var description: String = ""
+    var battery_level: String = ""
+    var points_green: String = ""
+    var points_tan: String = ""
+    var current_team: String = ""
+}
+
 struct Balise: Codable {
     let balise_id: Int
     let balise_name: String
@@ -17,10 +27,16 @@ struct BaliseDataCreate: Codable {
     var field_id: String
 }
 
-func randomName() -> String {
-    return ["Église", "Maison", "Prison", "École"].randomElement()!
+struct BaliseDataUpdate: Codable {
+    var pointsGreen: Int
+    var pointsTan: Int
+    var currentTeam: String
+    var name: String
+    var description: String
 }
 
-func randomLocation() -> String {
-    return ["Proche de la rivière", "dans la prison", "Sur le camion", "dans la salle de droite"].randomElement()!
+enum Team: String, CaseIterable {
+    case NA
+    case Green
+    case Tan
 }

@@ -10,6 +10,7 @@ struct TabNavigation: View {
                 .environmentObject(authentication)
             GameView()
                 .tabItem{ Label("Partie", systemImage: "gamecontroller") }
+                .environmentObject(authentication)
             EnterpriseView()
                 .tabItem{ Label("Entreprise", systemImage: "person.2.fill") }
                 .environmentObject(authentication)

@@ -20,8 +20,11 @@ class BaliseManager: ObservableObject {
         ApiService.shared.addBalise(baliseManager: self, baliseId: id)
     }
     
-    func updateBaliseToServer(balise: Balise) {
-        print("UPDATING BALISE..." + balise.balise_name)
+    func updateBaliseToServer(balise: baliseObservable) {
+        print(balise.balise_name)
+        ApiService.shared.updateBalise(baliseManager: self, balise: balise)
+        sleep(1)
+        updateBalisesFromServer()
     }
     
     func updateBalisesFromServer() {

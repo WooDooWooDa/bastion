@@ -16,7 +16,7 @@ struct ApiDataResponse: Decodable {
     var data: String
 }
 
-struct ApiErrorResponse: Codable, Error {
+struct ApiMessageResponse: Codable, Error {
     var object: String
     var message: String
 }
